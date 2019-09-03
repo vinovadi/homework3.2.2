@@ -1,0 +1,1877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOutput"
+        android:gravity="end"
+        android:text=""
+        android:hint="@string/output_txt"
+        android:textColorHint="@color/colorText"
+        android:textColor="@color/colorText"
+        android:textSize="40sp"
+        android:padding="20dp"
+        android:layout_margin="2dp"/>
+
+    <Button
+        android:id="@+id/btnChangeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottom_row"
+        android:background="@color/colorAccent"
+        android:text="@string/change_view"
+        android:textSize="25sp"
+        android:layout_margin="2dp"/>
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_below="@id/top_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@+id/left_row">
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/cancel_btn" />
+
+        <TextView
+            android:id="@+id/btnChangeSign"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/changeSign_btn"/>
+
+        <TextView
+            android:id="@+id/btnPercent"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/percent_btn"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/row1"
+        android:layout_toEndOf="@id/left_row">
+
+        <TextView
+            android:id="@+id/btn7"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/seven_btn"
+            />
+
+        <TextView
+            android:id="@+id/btn8"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/eight_btn"/>
+
+        <TextView
+            android:id="@+id/btn9"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/nine_btn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/row2"
+        android:layout_toEndOf="@id/left_row">
+
+        <TextView
+            android:id="@+id/btn4"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/four_btn"
+            />
+
+        <TextView
+            android:id="@+id/btn5"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/five_btn"/>
+
+        <TextView
+            android:id="@+id/btn6"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/six_btn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/row3"
+        android:layout_toEndOf="@id/left_row">
+
+        <TextView
+            android:id="@+id/btn1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/one_btn"
+            />
+
+        <TextView
+            android:id="@+id/btn2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/two_btn"/>
+
+        <TextView
+            android:id="@+id/btn3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/three_btn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/row4"
+        android:layout_toEndOf="@id/left_row">
+
+        <TextView
+            android:id="@+id/btn0"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/zero_btn"
+            />
+
+        <TextView
+            android:id="@+id/btnPoint"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorNumberCells"
+            android:textColor="@color/colorOutput"
+            android:text="@string/point_btn"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/math_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/top_row"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/btnDivide"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorOperations"
+            android:textColor="@color/colorOutput"
+            android:text="@string/divide_btn"/>
+
+        <TextView
+            android:id="@+id/btnMultiply"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorOperations"
+            android:textColor="@color/colorOutput"
+            android:text="@string/multiply_btn" />
+
+        <TextView
+            android:id="@+id/btnMinus"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorOperations"
+            android:textColor="@color/colorOutput"
+            android:text="@string/minus_btn"/>
+
+        <TextView
+            android:id="@+id/btnAdd"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorOperations"
+            android:textColor="@color/colorOutput"
+            android:text="@string/add_btn"/>
+
+        <TextView
+            android:id="@+id/btnEquals"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="35sp"
+            android:layout_margin="2dp"
+            android:padding="10dp"
+            android:background="@color/colorOperations"
+            android:textColor="@color/colorOutput"
+            android:text="@string/equals_btn"/>
+    </LinearLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/right_row"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_row"
+        android:layout_toStartOf="@id/math_actions"
+        android:layout_toEndOf="@id/row1"
+        android:layout_alignBottom="@id/row5"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/case1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="V"
+            app:layout_constraintBottom_toTopOf="@+id/case2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="I"
+            app:layout_constraintBottom_toTopOf="@+id/case3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case1" />
+
+        <TextView
+            android:id="@+id/case3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="N"
+            app:layout_constraintBottom_toTopOf="@+id/case4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2" />
+
+        <TextView
+            android:id="@+id/case4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintBottom_toTopOf="@+id/case5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case3" />
+
+        <TextView
+            android:id="@+id/case5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="K"
+            app:layout_constraintBottom_toTopOf="@+id/case6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case4" />
+
+        <TextView
+            android:id="@+id/case6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="H"
+            app:layout_constraintBottom_toTopOf="@+id/case7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case5" />
+
+        <TextView
+            android:id="@+id/case7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintBottom_toTopOf="@+id/case8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case6" />
+
+        <TextView
+            android:id="@+id/case8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="D"
+            app:layout_constraintBottom_toTopOf="@+id/case9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case7" />
+
+        <TextView
+            android:id="@+id/case9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintBottom_toTopOf="@+id/case10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case8" />
+
+        <TextView
+            android:id="@+id/case10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="V"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case9" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/bottom_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row5"
+        android:layout_alignParentStart="true"
+        android:layout_toEndOf="@id/math_actions">
+
+        <TextView
+            android:id="@+id/case1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="V"
+            app:layout_constraintEnd_toStartOf="@+id/case1_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="I"
+            app:layout_constraintEnd_toStartOf="@+id/case1_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="N"
+            app:layout_constraintEnd_toStartOf="@+id/case1_4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintEnd_toStartOf="@+id/case1_5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="K"
+            app:layout_constraintEnd_toStartOf="@+id/case1_6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="H"
+            app:layout_constraintEnd_toStartOf="@+id/case1_7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintEnd_toStartOf="@+id/case1_8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="D"
+            app:layout_constraintEnd_toStartOf="@+id/case1_9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintEnd_toStartOf="@+id/case1_10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case1_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="V"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case1_9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/left_row"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_row"
+        android:layout_alignBottom="@id/row5"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/case2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="V"
+            app:layout_constraintBottom_toTopOf="@+id/case2_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="I"
+            app:layout_constraintBottom_toTopOf="@+id/case2_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_1"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="N"
+            app:layout_constraintBottom_toTopOf="@+id/case2_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_2"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintBottom_toTopOf="@+id/case2_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_3"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="K"
+            app:layout_constraintBottom_toTopOf="@+id/case2_6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_4"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="H"
+            app:layout_constraintBottom_toTopOf="@+id/case2_7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_5"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintBottom_toTopOf="@+id/case2_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_6"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="D"
+            app:layout_constraintBottom_toTopOf="@+id/case2_9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_7"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintBottom_toTopOf="@+id/case2_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_8"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/case2_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="V"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/case2_9"
+            app:layout_constraintVertical_bias="0.5" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/top_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtOutput"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/case3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="V"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/case3_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="I"
+            app:layout_constraintEnd_toStartOf="@+id/case3_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="N"
+            app:layout_constraintEnd_toStartOf="@+id/case3_4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintEnd_toStartOf="@+id/case3_5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="K"
+            app:layout_constraintEnd_toStartOf="@+id/case3_6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="H"
+            app:layout_constraintEnd_toStartOf="@+id/case3_7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintEnd_toStartOf="@+id/case3_8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="D"
+            app:layout_constraintEnd_toStartOf="@+id/case3_9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="O"
+            app:layout_constraintEnd_toStartOf="@+id/case3_10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/case3_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="V"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/case3_9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/root2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtOutput2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorOutput"
+            android:gravity="end"
+            android:text=""
+            android:hint="@string/output_txt"
+            android:textColorHint="@color/colorText"
+            android:textColor="@color/colorText"
+            android:textSize="40sp"
+            android:padding="20dp"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/btnChangeView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trigon_row"
+            android:background="@color/colorAccent"
+            android:text="@string/change_view"
+            android:textSize="25sp"
+            android:layout_margin="2dp"/>
+
+        <LinearLayout
+            android:id="@+id/m_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_row2"
+            android:layout_toEndOf="@id/left_row2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/MC_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/MC_btn"/>
+
+            <TextView
+                android:id="@+id/MR_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/MR_btn"/>
+
+            <TextView
+                android:id="@+id/MS_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/MS_btn"/>
+
+            <TextView
+                android:id="@+id/MPlus_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/MPlus_btn"/>
+
+            <TextView
+                android:id="@+id/MMinus_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/MMinus_btn"/>
+
+            <TextView
+                android:id="@+id/root_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/root_btn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row1_2"
+            android:layout_below="@id/m_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toEndOf="@+id/left_row2">
+
+            <TextView
+                android:id="@+id/btnCancel_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/cancel_btn" />
+
+            <TextView
+                android:id="@+id/btnChangeSign2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/changeSign_btn"/>
+
+            <TextView
+                android:id="@+id/btnPercent2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/percent_btn"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/row1_2"
+            android:layout_toEndOf="@id/left_row2">
+
+            <TextView
+                android:id="@+id/btn7_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/seven_btn"
+                />
+
+            <TextView
+                android:id="@+id/btn8_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/eight_btn"/>
+
+            <TextView
+                android:id="@+id/btn9_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/nine_btn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row3_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/row2_2"
+            android:layout_toEndOf="@id/left_row2">
+
+            <TextView
+                android:id="@+id/btn4_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/four_btn"
+                />
+
+            <TextView
+                android:id="@+id/btn5_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/five_btn"/>
+
+            <TextView
+                android:id="@+id/btn6_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/six_btn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row4_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/row3_2"
+            android:layout_toEndOf="@id/left_row2">
+
+            <TextView
+                android:id="@+id/btn1_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/one_btn"
+                />
+
+            <TextView
+                android:id="@+id/btn2_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/two_btn"/>
+
+            <TextView
+                android:id="@+id/btn3_2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/three_btn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row5_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/row4_2"
+            android:layout_toEndOf="@id/left_row2">
+
+            <TextView
+                android:id="@+id/btn0_2"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/zero_btn"
+                />
+
+            <TextView
+                android:id="@+id/btnPoint2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorNumberCells"
+                android:textColor="@color/colorOutput"
+                android:text="@string/point_btn"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/math_actions2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/m_row"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/btnDivide2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorOperations"
+                android:textColor="@color/colorOutput"
+                android:text="@string/divide_btn"/>
+
+            <TextView
+                android:id="@+id/btnMultiply2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorOperations"
+                android:textColor="@color/colorOutput"
+                android:text="@string/multiply_btn" />
+
+            <TextView
+                android:id="@+id/btnMinus2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorOperations"
+                android:textColor="@color/colorOutput"
+                android:text="@string/minus_btn"/>
+
+            <TextView
+                android:id="@+id/btnAdd2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorOperations"
+                android:textColor="@color/colorOutput"
+                android:text="@string/add_btn"/>
+
+            <TextView
+                android:id="@+id/btnEquals2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorOperations"
+                android:textColor="@color/colorOutput"
+                android:text="@string/equals_btn"/>
+        </LinearLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/right_row2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/m_row"
+            android:layout_toStartOf="@id/math_actions2"
+            android:layout_toEndOf="@id/row1_2"
+            android:layout_alignBottom="@id/row5_2"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/case1b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="V"
+                app:layout_constraintBottom_toTopOf="@+id/case2b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case2b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="I"
+                app:layout_constraintBottom_toTopOf="@+id/case3b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case1b" />
+
+            <TextView
+                android:id="@+id/case3b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="N"
+                app:layout_constraintBottom_toTopOf="@+id/case4b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2b" />
+
+            <TextView
+                android:id="@+id/case4b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintBottom_toTopOf="@+id/case5b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case3b" />
+
+            <TextView
+                android:id="@+id/case5b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="K"
+                app:layout_constraintBottom_toTopOf="@+id/case6b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case4b" />
+
+            <TextView
+                android:id="@+id/case6b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="H"
+                app:layout_constraintBottom_toTopOf="@+id/case7b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case5b" />
+
+            <TextView
+                android:id="@+id/case7b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintBottom_toTopOf="@+id/case8b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case6b" />
+
+            <TextView
+                android:id="@+id/case8b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="D"
+                app:layout_constraintBottom_toTopOf="@+id/case9b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case7b" />
+
+            <TextView
+                android:id="@+id/case9b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintBottom_toTopOf="@+id/case10b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case8b" />
+
+            <TextView
+                android:id="@+id/case10b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="V"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case9b" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/bottom_row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row5_2"
+            android:layout_alignParentStart="true"
+            android:layout_toEndOf="@id/math_actions2">
+
+            <TextView
+                android:id="@+id/case1_1b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="V"
+                app:layout_constraintEnd_toStartOf="@+id/case1_2b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_2b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="I"
+                app:layout_constraintEnd_toStartOf="@+id/case1_3b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_1b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_3b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="N"
+                app:layout_constraintEnd_toStartOf="@+id/case1_4b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_2b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_4b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintEnd_toStartOf="@+id/case1_5b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_3b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_5b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="K"
+                app:layout_constraintEnd_toStartOf="@+id/case1_6b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_4b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_6b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="H"
+                app:layout_constraintEnd_toStartOf="@+id/case1_7b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_5b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_7b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintEnd_toStartOf="@+id/case1_8b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_6b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_8b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="D"
+                app:layout_constraintEnd_toStartOf="@+id/case1_9b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_7b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_9b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintEnd_toStartOf="@+id/case1_10b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_8b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case1_10b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="V"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case1_9b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/left_row2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/top_row2"
+            android:layout_alignBottom="@id/row5_2"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/case2_1b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="V"
+                app:layout_constraintBottom_toTopOf="@+id/case2_2b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_2b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="I"
+                app:layout_constraintBottom_toTopOf="@+id/case2_3b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_1b"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_3b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="N"
+                app:layout_constraintBottom_toTopOf="@+id/case2_4b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_2b"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_4b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintBottom_toTopOf="@+id/case2_5b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_3b"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_5b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="K"
+                app:layout_constraintBottom_toTopOf="@+id/case2_6b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_4b"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_6b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="H"
+                app:layout_constraintBottom_toTopOf="@+id/case2_7b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_5b"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_7b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintBottom_toTopOf="@+id/case2_8b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_6b"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_8b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="D"
+                app:layout_constraintBottom_toTopOf="@+id/case2_9b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_7b"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_9b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintBottom_toTopOf="@+id/case2_10b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_8b"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/case2_10b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="V"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/case2_9b"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/top_row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtOutput2"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/case3_1b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="V"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/case3_2b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_2b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="I"
+                app:layout_constraintEnd_toStartOf="@+id/case3_3b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_1b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_3b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="N"
+                app:layout_constraintEnd_toStartOf="@+id/case3_4b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_2b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_4b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintEnd_toStartOf="@+id/case3_5b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_3b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_5b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="K"
+                app:layout_constraintEnd_toStartOf="@+id/case3_6b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_4b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_6b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="H"
+                app:layout_constraintEnd_toStartOf="@+id/case3_7b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_5b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_7b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintEnd_toStartOf="@+id/case3_8b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_6b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_8b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="D"
+                app:layout_constraintEnd_toStartOf="@+id/case3_9b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_7b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_9b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="O"
+                app:layout_constraintEnd_toStartOf="@+id/case3_10b"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_8b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/case3_10b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="V"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/case3_9b"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/trigon_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottom_row2"
+            android:layout_toEndOf="@id/left_row2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/left_bracket_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/left_bracket_btn"/>
+
+            <TextView
+                android:id="@+id/right_bracket_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/right_bracket_btn"/>
+
+            <TextView
+                android:id="@+id/sin_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/sin_btn"/>
+
+            <TextView
+                android:id="@+id/cos_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/cos_btn"/>
+
+            <TextView
+                android:id="@+id/tan_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/tan_btn"/>
+
+            <TextView
+                android:id="@+id/ln_btn"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
+                android:background="@color/colorEngine"
+                android:textColor="@color/colorOutput"
+                android:text="@string/Ln_btn"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,287 @@
+package com.example.engineercalc;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Layout;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView mOutputTxt;
+    private TextView mCancelBtn;
+    private TextView mChangeSignBtn;
+    private TextView mPercentBtn;
+    private TextView mSevenBtn;
+    private TextView mEightBtn;
+    private TextView mNineBtn;
+    private TextView mMultiplyBtn;
+    private TextView mFourBtn;
+    private TextView mFiveBtn;
+    private TextView mSixBtn;
+    private TextView mMinusBtn;
+    private TextView mOneBtn;
+    private TextView mTwoBtn;
+    private TextView mThreeBtn;
+    private TextView mZeroBtn;
+    private TextView mPointBtn;
+    private TextView mEqualsBtn;
+    private String input;
+    private TextView mCase3_1;
+    private TextView mCase3_2;
+    private TextView mCase3_3;
+    private TextView mCase3_4;
+    private TextView mCase3_5;
+    private TextView mCase3_6;
+    private TextView mCase3_7;
+    private TextView mCase3_8;
+    private TextView mCase3_9;
+    private TextView mCase3_10;
+    private TextView mCase2_1;
+    private TextView mCase2_2;
+    private TextView mCase2_3;
+    private TextView mCase2_4;
+    private TextView mCase2_5;
+    private TextView mCase2_6;
+    private TextView mCase2_7;
+    private TextView mCase2_8;
+    private TextView mCase2_9;
+    private TextView mCase2_10;
+    private TextView mCase1_1;
+    private TextView mCase1_2;
+    private TextView mCase1_3;
+    private TextView mCase1_4;
+    private TextView mCase1_5;
+    private TextView mCase1_6;
+    private TextView mCase1_7;
+    private TextView mCase1_8;
+    private TextView mCase1_9;
+    private TextView mCase1_10;
+    private TextView mCase1;
+    private TextView mCase2;
+    private TextView mCase3;
+    private TextView mCase4;
+    private TextView mCase5;
+    private TextView mCase6;
+    private TextView mCase7;
+    private TextView mCase8;
+    private TextView mCase9;
+    private TextView mCase10;
+    private Button mChangeViewBtn;
+    private TextView mOutputTxt2;
+    private TextView mCancelBtn2;
+    private TextView mChangeSignBtn2;
+    private TextView mPercentBtn2;
+    private TextView mSevenBtn2;
+    private TextView mEightBtn2;
+    private TextView mNineBtn2;
+    private TextView mMultiplyBtn2;
+    private TextView mFourBtn2;
+    private TextView mFiveBtn2;
+    private TextView mSixBtn2;
+    private TextView mMinusBtn2;
+    private TextView mOneBtn2;
+    private TextView mTwoBtn2;
+    private TextView mThreeBtn2;
+    private TextView mZeroBtn2;
+    private TextView mPointBtn2;
+    private TextView mEqualsBtn2;
+    private TextView mCase3_1b;
+    private TextView mCase3_2b;
+    private TextView mCase3_3b;
+    private TextView mCase3_4b;
+    private TextView mCase3_5b;
+    private TextView mCase3_6b;
+    private TextView mCase3_7b;
+    private TextView mCase3_8b;
+    private TextView mCase3_9b;
+    private TextView mCase3_10b;
+    private TextView mCase2_1b;
+    private TextView mCase2_2b;
+    private TextView mCase2_3b;
+    private TextView mCase2_4b;
+    private TextView mCase2_5b;
+    private TextView mCase2_6b;
+    private TextView mCase2_7b;
+    private TextView mCase2_8b;
+    private TextView mCase2_9b;
+    private TextView mCase2_10b;
+    private TextView mCase1_1b;
+    private TextView mCase1_2b;
+    private TextView mCase1_3b;
+    private TextView mCase1_4b;
+    private TextView mCase1_5b;
+    private TextView mCase1_6b;
+    private TextView mCase1_7b;
+    private TextView mCase1_8b;
+    private TextView mCase1_9b;
+    private TextView mCase1_10b;
+    private TextView mCase1b;
+    private TextView mCase2b;
+    private TextView mCase3b;
+    private TextView mCase4b;
+    private TextView mCase5b;
+    private TextView mCase6b;
+    private TextView mCase7b;
+    private TextView mCase8b;
+    private TextView mCase9b;
+    private TextView mCase10b;
+    private Button mChangeViewBtn2;
+    private RelativeLayout root;
+    private RelativeLayout root2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        initViewsCasual();
+        initViewsEngineer();
+        initChangeView();
+    }
+
+    public void initViewsCasual() {
+        root = findViewById(R.id.root);
+        mOutputTxt = findViewById(R.id.txtOutput);
+        mCancelBtn = findViewById(R.id.btnCancel);
+        mChangeSignBtn = findViewById(R.id.btnChangeSign);
+        mPercentBtn = findViewById(R.id.btnPercent);
+        mSevenBtn = findViewById(R.id.btn7);
+        mEightBtn = findViewById(R.id.btn8);
+        mNineBtn = findViewById(R.id.btn9);
+        mMultiplyBtn = findViewById(R.id.btnMultiply);
+        mFourBtn = findViewById(R.id.btn4);
+        mFiveBtn = findViewById(R.id.btn5);
+        mSixBtn = findViewById(R.id.btn6);
+        mMinusBtn = findViewById(R.id.btnMinus);
+        mOneBtn = findViewById(R.id.btn1);
+        mTwoBtn = findViewById(R.id.btn2);
+        mThreeBtn = findViewById(R.id.btn3);
+        mZeroBtn = findViewById(R.id.btn0);
+        mPointBtn = findViewById(R.id.btnPoint);
+        mEqualsBtn = findViewById(R.id.btnEquals);
+        mChangeViewBtn = findViewById(R.id.btnChangeView);
+        mCase3_1 = findViewById(R.id.case3_1);
+        mCase3_2 = findViewById(R.id.case3_2);
+        mCase3_3 = findViewById(R.id.case3_3);
+        mCase3_4 = findViewById(R.id.case3_4);
+        mCase3_5 = findViewById(R.id.case3_5);
+        mCase3_6 = findViewById(R.id.case3_6);
+        mCase3_7 = findViewById(R.id.case3_7);
+        mCase3_8 = findViewById(R.id.case3_8);
+        mCase3_9 = findViewById(R.id.case3_9);
+        mCase3_10 = findViewById(R.id.case3_10);
+        mCase2_1 = findViewById(R.id.case2_1);
+        mCase2_2 = findViewById(R.id.case2_2);
+        mCase2_3 = findViewById(R.id.case2_3);
+        mCase2_4 = findViewById(R.id.case2_4);
+        mCase2_5 = findViewById(R.id.case2_5);
+        mCase2_6 = findViewById(R.id.case2_6);
+        mCase2_7 = findViewById(R.id.case2_7);
+        mCase2_8 = findViewById(R.id.case2_8);
+        mCase2_9 = findViewById(R.id.case2_9);
+        mCase2_10 = findViewById(R.id.case2_10);
+        mCase1_1 = findViewById(R.id.case1_1);
+        mCase1_2 = findViewById(R.id.case1_2);
+        mCase1_3 = findViewById(R.id.case1_3);
+        mCase1_4 = findViewById(R.id.case1_4);
+        mCase1_5 = findViewById(R.id.case1_5);
+        mCase1_6 = findViewById(R.id.case1_6);
+        mCase1_7 = findViewById(R.id.case1_7);
+        mCase1_8 = findViewById(R.id.case1_8);
+        mCase1_9 = findViewById(R.id.case1_9);
+        mCase1_10 = findViewById(R.id.case1_10);
+        mCase1 = findViewById(R.id.case1);
+        mCase2 = findViewById(R.id.case2);
+        mCase3 = findViewById(R.id.case3);
+        mCase4 = findViewById(R.id.case4);
+        mCase5 = findViewById(R.id.case5);
+        mCase6 = findViewById(R.id.case6);
+        mCase7 = findViewById(R.id.case7);
+        mCase8 = findViewById(R.id.case8);
+        mCase9 = findViewById(R.id.case9);
+        mCase10 = findViewById(R.id.case10);
+    }
+
+    public void initViewsEngineer() {
+        root2 = findViewById(R.id.root2);
+        mOutputTxt2 = findViewById(R.id.txtOutput2);
+        mCancelBtn2 = findViewById(R.id.btnCancel_2);
+        mChangeSignBtn2 = findViewById(R.id.btnChangeSign2);
+        mPercentBtn2 = findViewById(R.id.btnPercent2);
+        mSevenBtn2 = findViewById(R.id.btn7_2);
+        mEightBtn2 = findViewById(R.id.btn8_2);
+        mNineBtn2 = findViewById(R.id.btn9_2);
+        mMultiplyBtn2 = findViewById(R.id.btnMultiply2);
+        mFourBtn2 = findViewById(R.id.btn4_2);
+        mFiveBtn2 = findViewById(R.id.btn5_2);
+        mSixBtn2 = findViewById(R.id.btn6_2);
+        mMinusBtn2 = findViewById(R.id.btnMinus2);
+        mOneBtn2 = findViewById(R.id.btn1_2);
+        mTwoBtn2 = findViewById(R.id.btn2_2);
+        mThreeBtn2 = findViewById(R.id.btn3_2);
+        mZeroBtn2 = findViewById(R.id.btn0_2);
+        mPointBtn2 = findViewById(R.id.btnPoint2);
+        mEqualsBtn2 = findViewById(R.id.btnEquals2);
+        mChangeViewBtn2 = findViewById(R.id.btnChangeView2);
+        mCase3_1b = findViewById(R.id.case3_1b);
+        mCase3_2b = findViewById(R.id.case3_2b);
+        mCase3_3b = findViewById(R.id.case3_3b);
+        mCase3_4b = findViewById(R.id.case3_4b);
+        mCase3_5b = findViewById(R.id.case3_5b);
+        mCase3_6b = findViewById(R.id.case3_6b);
+        mCase3_7b = findViewById(R.id.case3_7b);
+        mCase3_8b = findViewById(R.id.case3_8b);
+        mCase3_9b = findViewById(R.id.case3_9b);
+        mCase3_10b = findViewById(R.id.case3_10b);
+        mCase2_1b = findViewById(R.id.case2_1b);
+        mCase2_2b = findViewById(R.id.case2_2b);
+        mCase2_3b = findViewById(R.id.case2_3b);
+        mCase2_4b = findViewById(R.id.case2_4b);
+        mCase2_5b = findViewById(R.id.case2_5b);
+        mCase2_6b = findViewById(R.id.case2_6b);
+        mCase2_7b = findViewById(R.id.case2_7b);
+        mCase2_8b = findViewById(R.id.case2_8b);
+        mCase2_9b = findViewById(R.id.case2_9b);
+        mCase2_10b = findViewById(R.id.case2_10b);
+        mCase1_1b = findViewById(R.id.case1_1b);
+        mCase1_2b = findViewById(R.id.case1_2b);
+        mCase1_3b = findViewById(R.id.case1_3b);
+        mCase1_4b = findViewById(R.id.case1_4b);
+        mCase1_5b = findViewById(R.id.case1_5b);
+        mCase1_6b = findViewById(R.id.case1_6b);
+        mCase1_7b = findViewById(R.id.case1_7b);
+        mCase1_8b = findViewById(R.id.case1_8b);
+        mCase1_9b = findViewById(R.id.case1_9b);
+        mCase1_10b = findViewById(R.id.case1_10b);
+        mCase1b = findViewById(R.id.case1b);
+        mCase2b = findViewById(R.id.case2b);
+        mCase3b = findViewById(R.id.case3b);
+        mCase4b = findViewById(R.id.case4b);
+        mCase5b = findViewById(R.id.case5b);
+        mCase6b = findViewById(R.id.case6b);
+        mCase7b = findViewById(R.id.case7b);
+        mCase8b = findViewById(R.id.case8b);
+        mCase9b = findViewById(R.id.case9b);
+        mCase10b = findViewById(R.id.case10b);
+    }
+
+    public void initChangeView() {
+        mChangeViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                root.setVisibility(View.GONE);
+                root2.setVisibility(View.VISIBLE);
+            }
+        });
+
+        mChangeViewBtn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                root2.setVisibility(View.GONE);
+                root.setVisibility(View.VISIBLE);
+            }
+        });
+    }
+}
